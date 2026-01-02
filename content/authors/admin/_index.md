@@ -46,11 +46,12 @@ profiles:
 
 interests:
   - Neuroengineering
-  - Artificial Intelligence
+  - Machine learning
+  - Optimal task design
 
 
 education:
-  - area: (ongoing) PhD Electrical & Computer Engineering
+  - area: PhD Electrical & Computer Engineering
     institution: Rice University
     date_start: 2025-08-20
     # summary: |
@@ -69,13 +70,21 @@ education:
 
 work:
   - position: Grad Student
-    company_name: Rice Neuroengineering Initative
-    company_url: 'https://neuroengineering.rice.edu//'
+    company_name: Rice BCI Lab
+    company_url: 'https://www.rice-npl.com/'
     company_logo: ''
     date_start: 2025-08-25
     # date_end: 2025-08-25
     summary: |2-
-      I am a grad student at Rice currently doing rotations! Check back later for more :) 
+      I am a first-year grad student working with Dr. Nishal Shah in the [Rice BCI Lab](https://www.rice-npl.com/) on decoding motor 
+  - position: Rotation Student
+    company_name: Hennig Lab
+    company_url: 'https://www.henniglab.org//'
+    company_logo: ''
+    date_start: 2025-10-07
+    date_end: 2025-11-17
+    summary: |2-
+      I did a rotation with Dr. Jay Hennig's group where I analyzed human spiking  activity in deep-brain areas, with the goal of understanding how that activity varies (or not) when performing different tasks.
   - position: Research Engineer
     company_name: Bionic Sight
     company_url: 'https://www.bionicsightllc.com/'
@@ -96,21 +105,63 @@ work:
 
 # # Skills
 # # Add your own SVG icons to `assets/media/icons/`
-# skills:
-#   - name: Technical Skills
-#     items:
-#       - name: Python
-#         description: ''
-#         percent: 80
-#         icon: code-bracket
-#       - name: Data Science
-#         description: ''
-#         percent: 100
-#         icon: chart-bar
-#       - name: SQL
-#         description: ''
-#         percent: 40
-#         icon: circle-stack
+skills:
+  - name: Programming
+    items:
+      - name: Python
+        description: ''
+        percent: 90
+        icon_pack: ''
+        icon: ''
+      - name: R
+        description: ''
+        percent: 70
+        icon_pack: ''
+        icon: ''
+      - name: C/C++
+        description: ''
+        percent: 70
+        icon_pack: ''
+        icon: ''
+      - name: Backend Engineering
+        description: 'Git, Docker, Airflow'
+        percent: 75
+        icon_pack: ''
+        icon: ''
+  - name: AI
+    items:
+      - name: Deep Learning
+        description: 'Pytorch, Tensorflow, etc.'
+        percent: 85
+        icon_pack: ''
+        icon: ''
+      - name: Computer Vision
+        description: 'OpenCV'
+        percent: 75
+        icon_pack: ''
+        icon: ''
+      - name: Robotics
+        description: 'ROS2'
+        percent: 65
+        icon_pack: ''
+        icon: ''
+  - name: Clinical Testing
+    items:
+      - name: ACRP certified
+        description: ''
+        percent: 80
+        icon_pack: ''
+        icon: ''
+      - name: GCP certified
+        description: ''
+        percent: 80
+        icon_pack: ''
+        icon: ''
+     
+  
+
+  
+
 #   - name: Hobbies
 #     color: '#eeac02'
 #     color_border: '#f0bf23'
@@ -128,22 +179,17 @@ work:
 #         percent: 80
 #         icon: camera
 
-# languages:
-#   - name: English
-#     percent: 100
-
-
-# # Awards.
-# #   Add/remove as many awards below as you like.
-# #   Only `title`, `awarder`, and `date` are required.
-# #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-# awards:
-#   - title: Neural Networks and Deep Learning
-#     url: https://www.coursera.org/learn/neural-networks-deep-learning
-#     date: '2023-11-25'
-#     awarder: Coursera
-#     icon: coursera
-#     summary: |
+# Awards.
+#   Add/remove as many awards below as you like.
+#   Only `title`, `awarder`, and `date` are required.
+#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
+awards:
+  - title: Rawlings Cornell III Presidential Research Scholarship
+    url: https://scl.cornell.edu/get-involved/cornell-commitment/rawlings-cornell-presidential-research-scholars
+    date: '2016-08-01'
+    awarder: Cornell University
+    icon: ''
+    summary: |
 #       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
 #   - title: Blockchain Fundamentals
 #     url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
@@ -167,8 +213,9 @@ work:
 
 ## Hi!
 
-Welcome to my site! I'm currently a grad student at Rice University in Houston, Texas researching how artificial intelligence can be used to restore function for patients with neurodegenerative diseases. Before this, I spent four amazing years as an engineer in New York City at [Bionic Sight](https://www.bionicsightllc.com/), working on a [clinical trial](https://classic.clinicaltrials.gov/ct2/show/NCT04278131) of an optogenetic retinal therapy for blind patients.
+Welcome to my site! I'm a grad student at the [Rice BCI Lab](https://www.rice-npl.com/) in Houston, Texas researching how artificial intelligence can be used to restore motor functions for patients with spinal cord injury, ALS, and other disease that cause motor deficits. Before this, I spent four amazing years as a research engineer in New York City at [Bionic Sight](https://www.bionicsightllc.com/), working on a [clinical trial](https://classic.clinicaltrials.gov/ct2/show/NCT04278131) of an optogenetic retinal therapy for blind patients. Through these experiences, I'm really optimistic that advances in complementary fields like AI, materials science, genetics, and basic neuroscience (among nothers) will allow us to ask hard questions about how the brain thinks with immediate benefits for people who need it. 
 
-Outside of work, I'm a big fan of soccer and basketball and enjoy learning new things about the world, through the arts, travel, or through my family and friends. I certainly enjoy writing- this website is a work-in-progress for research related writing, but I also semi-regularly post creative writing on [my newsletter](https://shubhom.substack.com/). 
+Outside of research, I enjoy learning new things about the world through books, movies, travel, food or family and friends, and enjoy watching and playing sports like soccer and basketball. I also enjoy writing; this website is a work-in-progress for research related work, but I also semi-regularly post creative writing on [my newsletter](https://shubhom.substack.com/). 
 
-If you're interested in connecting about research or something else feel free to shoot me a line!
+If you're interested in connecting about research or want to grab a coffee I'm all ears, feel free to shoot me a line. 
+

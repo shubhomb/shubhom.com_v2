@@ -5,7 +5,7 @@
     <link>http://localhost:1313/</link>
       <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <description>Shubhom&#39;s Website</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
       <title>Shubhom&#39;s Website</title>
@@ -34,11 +34,148 @@
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description></description>
+      <title>Unraveling the Neural Code</title>
+      <link>http://localhost:1313/post/brain-recording/brain_recording/</link>
+      <pubDate>Wed, 10 Jul 2024 12:45:14 -0400</pubDate>
+      <guid>http://localhost:1313/post/brain-recording/brain_recording/</guid>
+      <description>&lt;h2 id=&#34;the-holy-grail&#34;&gt;The Holy Grail&lt;/h2&gt;
+&lt;p&gt;The proverbial holy grail of neuroscience is to translate neural impulses into behavior and vice versa: cracking the neural code. It&amp;rsquo;s a research goal that holds not only a certain intellectual allure but also important clinical ramifications. Many neurological and psychiatric diseases, from dementia to depression, addiction, and CTE notoriously lack quantitative definitions or reliable biomarkers, meaning few current scanning methods, blood test, nasal swabs, or questionnaires can give doctors definitive disease prognoses or severity assessments in the way a pulmonologist can see a tumor in an CT-scan or a genetic screen can confirm Down&amp;rsquo;s syndrome. Both the biochemical mechanisms and signal processing capabilities of the brain need to be understood for the advancement of neurotherapeutics.&lt;/p&gt;
+&lt;p&gt;One of the biggest impediments contemporary neuroscientists face is a lack of tools to record from the animal brain &lt;em&gt;in vivo&lt;/em&gt; . The problem is multifold. First, consider the scale: the adult human brain is thought to contain  &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2776484/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;85 billion neurons&lt;/a&gt;,
+each of which may fire an action potential that occurs over roughly 5 milliseconds. For a coarse analogy, imagine how hard of a task it would be to overhear a conversation between 10 times the number of people on Earth, at 80 times the speed of a normal conversation,
+trying to figure out what each person is saying (while they are speaking in different languages and at different volumes).&lt;/p&gt;
+&lt;p&gt;This gargantuan problem is partly alleviated by the fact that certain regions of the brain can be associated with specific functions across all subjects belonging to the same species, and there is redundancy in neural circuitry that ensures individual neurons are unlikely to be the sole transmitters of information in important pathways. The daunting task of deciphering how neurons communicate nevertheless requires careful experimentation on both animals and humans.&lt;/p&gt;
+&lt;p&gt;What of the connections between neurons in different parts of the brain? How does the brain decide to move one’s mouth in response to a planned word to utter, and how do we learn from memories and experiences that are sensed from practices, experiences, and emotions? To further complicate the matter, the recording apparatus can’t influence a subject’s behavior - a mouse with a large apparatus strapped onto its head will behave unnaturally, producing noisy or indecipherable neural firing as it attempts to adapt to the weight of the electrode or fears for its life. The ideal machine records the firing of every neuron as non-invasively and surreptitiously as possible.&lt;/p&gt;
+&lt;p&gt;If such a machine existed, scientists could present varying stimuli to record large-scale neural responses, and map responses to stimuli in different regions of the brain using computational methods. Ideally, such a mapping would reveal causal mechanisms in neural circuits: how a stimulus elicits behavior, and more specifically how that behavior is represented across the brain, over time. Imagine learning how to play the piano: your ears need to pick up diverse pitches of sound, your eyes may need to read music, and your fingers need to move. As you learn, reinforcement from hearing yourself play or even from other people builds your technical ability, and eventually you may even memorize some songs. A neuroscientist studying you may want to see how information from your cerebellum, retina, and cochlea flows to various parts of your brain while this happens, and how these networks may change over time as you gain experience. Unfortunately, this is akin to finding a needle in a haystack, because it is impossible to extract neural activity from the brain at such a spatiotemporal scale at present.&lt;/p&gt;
+&lt;p&gt;Before I started working in this field, I had the misdirected notion the problem of scaling neural recording was primarily one of insufficient algorithmic ingenuity - I mistakenly assumed that better computer vision models would be the answer to interpreting fMRI scans for automating diagnoses, or that more centrally collected, massive high-quality patient databases would reveal the mechanisms underlying certain diseases (these ideas are, I have been told, something of an existing stereotype in engineers’ thinking). While these are important endeavors that can have tangible clinical benefits, they are not holistic solutions for “modeling the brain”.&lt;/p&gt;
+&lt;p&gt;So the question remains: how do we learn anything about the brain, and what can we do to solve the puzzle of unraveling its code? Modern brain recording technologies make tradeoffs in spatial resolution, temporal resolution and invasiveness to give neuroscientists insights about brain activity. Now that I’ve understood this problem in a little more detail, I hope writing about data acquisition from the brain sheds some light on why understanding the brain is such a difficult task for others who are coming from an engineering background like me.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/recording1.svg.png&#34; alt=&#34;Brain functional imaging techniques&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;By Thomas Deffieux, Charlie Demene, Mathieu Pernot, Mickael Tanter - &lt;a href=&#34;https://doi.org/10.1016/j.conb.2018.02.001&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1016/j.conb.2018.02.001&lt;/a&gt;, CC BY 4.0, &lt;a href=&#34;https://commons.wikimedia.org/w/index.php?curid=90400311&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://commons.wikimedia.org/w/index.php?curid=90400311&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In this article I only mention modalities that help monitor activity in parts of the brain (if one were to ask, say, “How do the occipital cortex and hippocampus behave over a 20 second time period after you see a familiar face?”), which are commonly called “functional” imaging paradigms in clinical practice. I will leave out any discussion of “structural” imaging, which is concerned primarily with visualizing physical attributes of the brain at a given moment in time (asking, say “Where is there a tumor in the brain?”).&lt;/p&gt;
+&lt;h2 id=&#34;electrophysiology&#34;&gt;Electrophysiology&lt;/h2&gt;
+&lt;p&gt;The most direct way of accessing information from populations of neurons is by directly measuring their electrical activity as a function of time. In a cell in a dish, one is able to directly poke a desired neuronal region to measure current passing through it, and in fact a very common technique called patch-clamping applies this basic principle. A similar idea can then be extended to living cells - record electrical activity of one or more neurons using an electrode. There are a couple ways to go about this, depending on the cells you intend to record and the invasiveness of the recording. It’s ideal to make direct contact with the target neurons to maximize signal over noise, as layers of other tissue, bone and/or skin may distort the signal. The drawback is that removing tissue effectively means performing a surgery, which might be risky or impair voluntary function. This constraint is the invasiveness of a recording method, and is an important consideration in an experimental or clinical setup.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/recording2.png&#34; alt=&#34;Patch-clamp technique&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Image source: &lt;a href=&#34;https://www.leica-microsystems.com/science-lab/life-science/the-patch-clamp-technique/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.leica-microsystems.com/science-lab/life-science/the-patch-clamp-technique/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My company Bionic Sight is working on a treatment for vision restoration, which means in part that we’re interested in recording the neurons of the retina and the neurons of the visual cortex in order to determine the behavior of these neurons with respect to treatment. The retinal electrophysiology recording is called an electroretinogram (ERG) and places electrodes on the cornea (surface) of the eye to measure the response of the retina to a given stimulus. An alternative, less invasive option is the electroencephalogram (EEG), which places electrodes directly on the scalp. For example, a common EEG procedure called the visually-evoked potential (VEP) tests the patient’s responses to flashes of light by placing electrodes near the back of their head. Similar tradeoffs between information and invasiveness are apparent in all neuroscientific studies.&lt;/p&gt;
+&lt;p&gt;For some applications like motor neuroprosthetics, you need less noisy, more population-specific measurements, at the brain level which involves placing electrodes on the cortical surface. This form of brain recording, interchangeably known as intracranial EEG (iEEG) or electrocorticography (ECG, not to be confused with an electrocardiogram), requires surgically removing part of the skull and implanting the electrode on the surface of the brain at a region of interest. Many well-known neuroprosthetic device companies like Neuralink, Precision Neuroscience, and Paradromics are using iEEGs and modifications of iEEGs to record neural populations in the motor cortex to map neural activity to patient intent in an activity like moving a computer mouse cursor. The recently achieved state-of-the art in this area is &lt;a href=&#34;https://www.fiercebiotech.com/medtech/precision-neuroscience-deploys-4096-electrodes-brain-computer-interface-procedure&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a 4,096 electrode implant created by Precision Neuroscience&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Electrophysiology techniques share some common drawbacks. First, there is the tradeoff between invasiveness and precision. To get a strong signal, as it stands, you need to perform a surgery. Next, they are localized, such that even iEEGs can only record several hundreds of neurons at a time in living humans, a needle in the haystack of 85 billion neurons we have. This doesn’t work when you want to know how different regions of the brain are involved in a particular process. These drawbacks motivate some of the other techniques neuroscientists use to understand neural activity.&lt;/p&gt;
+&lt;h2 id=&#34;noninvasive-functional-imaging&#34;&gt;Noninvasive Functional Imaging&lt;/h2&gt;
+&lt;p&gt;While having access to behavior at the neuronal level is ideal, it is infeasible to to scale electrophysiology with the current technology available to understand relationships between parts of the brain or map the the activity of multiple neural circuits to a person’s behavior, because it would necessitate millions of electrodes possibly being placed deep into sub-cortical tissue. Instead, to study the brain’s behavior at a coarser scale, scientists opt to use functional imaging, which simply means imaging of the brain while the subject is performing a specific activity. These methods trade off the high spatial and temporal resolution of electrode-based recordings for the ability to noninvasively probe larger regions of interest in the brain.&lt;/p&gt;
+&lt;p&gt;The most common functional imaging technique is functional magnetic resonance imaging (fMRI), an adaptation of the traditional MRI used all over the body that is specific to the brain. fMRI takes advantage of the electromagnetic properties of blood to track blood flow in the brain over the course of an experiment, with the assumption that blood will rush to the parts of the brain that are most involved in a certain task (termed “hemodynamic response”). fMRI was the first functional imaging technique, developed by Seiji Ogawa, who showed that hemoglobin had different magnetic properties in its oxygenated and deoxygenated state, a difference termed the Blood-Oxygen Level Dependent (BOLD) contrast, which could be detected using MRI. One challenge with fMRI is the low sensitivity of the BOLD response- you need to be studying stimuli and/or subjects that generate a sufficient BOLD contrast over the noise. While a high signal-to-noise ratio is an obvious goal of any recording paradigm, noise can come from other brain processes or movements during the scan, and the hemodynamic response can vary between subjects. Furthermore, fMRI requires the subject to lie still in a large apparatus, which limits its experimental utility, and the apparatus can be distractingly loud for patients (quite literally a source of noise). fMRI has nonetheless been instrumental to advancing neuroscientists’ understanding of the regions of the brain and how they interact.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/recording3.png&#34; alt=&#34;An example fMRI showing, with BOLD contrast visible in the reddish regions&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Image source: Image from &lt;a href=&#34;https://www.ndcn.ox.ac.uk/divisions/fmrib/what-is-fmri/how-is-fmri-used&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.ndcn.ox.ac.uk/divisions/fmrib/what-is-fmri/how-is-fmri-used&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Radiation in non-visible wavelengths that are used in other parts of the body have been adapted to functional imaging in the brain as well. Functional near-infrared spectroscopy (fNIRS) allows noninvasive measurement of hemodynamic response near the cortical surface by taking advantage of the absorption properties of hemoglobin to this form of radiation. fNIRS sensors have been decreasing in size and cost, &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6367070/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;making fNIRS a useful modality when subjects need to be allowed to move freely&lt;/a&gt;. &lt;a href=&#34;https://www.nature.com/articles/nmeth.1641&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Functional ultrasound (fUS)&lt;/a&gt; imaging is another promising technique that uses the Doppler effect to localize blood flow. fUS is gaining momentum for its possible clinical application because at high frequencies, it has high spatiotemporal resolution in a portable form factor. Crucially, these techniques all use properties of blood to detect changes in the brain, and vary in their spatiotemporal resolution, depth, and invasiveness.&lt;/p&gt;
+&lt;p&gt;However, all functional imaging techniques need to use blood flow as a proxy for neural activity. Magnetoencephalography (MEG), for example, records the magnetic fields created by the electric currents in the brain. The noise present in MEG varies depending on the source of neural activity and presents a higher temporal resolution than fMRI.&lt;/p&gt;
+&lt;p&gt;Yet another notable and common functional paradigm in use is positron emission tomography (PET). PET is a functional imaging paradigm used all over the body that introduces radioactive material known as radiotracers and tracks the reaction of the radiotracer at the site of interest. The materials of choice for the brain are oxygen-15, which is used to track to localize oxygenation, and fluorodeoxyglucose (FDG), which is used to localize glucose consumption. Drawbacks here are the requirement of radioactive material, which decays on the order of 2 to 30 minutes depending on the radiotracer, along with stationary and expensive tomography equipment. However, PETs are commonly used to study Alzheimer’s disease because Alzheimer&amp;rsquo;s has been observed to have an impact on both oxygen and glucose consumption.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/recording5.jpg&#34; alt=&#34;PET scan&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Image source: Jens Maus via Wikimedia Commons)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;optical-imaging&#34;&gt;Optical Imaging&lt;/h2&gt;
+&lt;p&gt;A last class of imaging tools uses microscopy to look at cellular activity. I had wrongly assumed that microscopy is reserved for slices of cell tissue, but it turns out types of microscopy can be used for observing neurons at single-cell resolution in living organisms, including primates. The technicalities of the different kinds of microscopy are beyond the scope of what I’m covering, but it suffices to say that techniques commonly used in other fields like fluorescence microscopy, light microscopy, and electron microscopy all have applications in neuroscience. For example, a particularly useful form of fluorescence microscopy is calcium imaging, a technique in which calcium indicators are introduced to the brain. This works because neural action potentials are marked by an influx of calcium. While the resolution of this is excellent, it is still invasive (a microscope needs to be inserted into the head) and requires the introduction of a fluorescent indicator. Furthermore, while having single-cell specific information is wonderful, the microscope can only focus on one part of the brain, so activity beyond a very specific region would not be recorded. Functional imaging and optical imaging therefore share some similar constraints.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/recording4.jpg&#34; alt=&#34;Calcium imaging of pyramidal cells&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Image source: MIT News, &lt;a href=&#34;https://news.mit.edu/2012/neuron-imaging-calcium-1017&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://news.mit.edu/2012/neuron-imaging-calcium-1017&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-right-choice&#34;&gt;The Right Choice&lt;/h2&gt;
+&lt;p&gt;There isn’t necessarily a correct imaging modality even within a specific problem domain - some studies take fMRIs and PETs of subjects to have two ways of studying similar activity, and the choice of imaging modality comes down to the limitations and objectives of the experimental setup. The effort to crack the neural code will likely be a combination of several current methods and novel ones we come up with. The key constraints of spatiotemporal resolution and invasiveness, coupled with practical considerations of cost, availability, and study objectives, inform neuroscience researchers how to read brain activity.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s next? While the methods I detailed are still very much relevant in research, data acquisition to decode the human brain in its entirety may seem a distant reality. One area of neuroscience, connectomics, involves piecing together vast datasets of annotated microscopy images of model organisms to create a mapping of the brain: a recent milestone in connectomics celebrated &lt;a href=&#34;https://www.nature.com/articles/d41586-024-01096-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the mapping of one cubic centimeter of mouse tissue&lt;/a&gt;. Other researchers are using technologies like &lt;a href=&#34;https://www.caltech.edu/about/news/ultrasound-enables-less-invasive-brainmachine-interfaces&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fUS to both read and modulate brain activity in BMIs&lt;/a&gt;. Electrode based approaches are scaling capability &lt;a href=&#34;https://ieeexplore.ieee.org/document/8993611&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;exponentially akin to Moore&amp;rsquo;s Law&lt;/a&gt;, and the advancement of artificial intelligence is accelerating some of the painstaking parts of this process, but we don&amp;rsquo;t need to decode the brain in full to benefit patients. Excitingly, the academic results of the last decade are reaping clinical benefits now (including &lt;a href=&#34;https://physiology.med.cornell.edu/faculty/nirenberg/lab/papers/PNAS-2012-Nirenberg-1207035109.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;for Bionic Sight&lt;/a&gt;).&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -63,232 +200,6 @@
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/scikit/</guid>
       <description>&lt;p&gt;scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>🧠 Sharpen your thinking with a second brain</title>
-      <link>http://localhost:1313/post/second-brain/</link>
-      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/second-brain/</guid>
-      <description>&lt;p&gt;Create a personal knowledge base and share your knowledge with your peers.&lt;/p&gt;
-&lt;p&gt;Hugo Blox web framework empowers you with one of the most flexible note-taking capabilities out there.&lt;/p&gt;
-&lt;p&gt;Create a powerful knowledge base that works on top of a local folder of plain text Markdown files.&lt;/p&gt;
-&lt;p&gt;Use it as your second brain, either publicly sharing your knowledge with your peers via your website, or via a private GitHub repository and password-protected site just for yourself.&lt;/p&gt;
-&lt;h2 id=&#34;mindmaps&#34;&gt;Mindmaps&lt;/h2&gt;
-&lt;p&gt;Hugo Blox supports a Markdown extension for mindmaps.&lt;/p&gt;
-&lt;p&gt;With this open format, can even edit your mindmaps in other popular tools such as Obsidian.&lt;/p&gt;
-&lt;p&gt;Simply insert a Markdown code block labelled as &lt;code&gt;markmap&lt;/code&gt; and optionally set the height of the mindmap as shown in the example below.&lt;/p&gt;
-&lt;p&gt;Mindmaps can be created by simply writing the items as a Markdown list within the &lt;code&gt;markmap&lt;/code&gt; code block, indenting each item to create as many sub-levels as you need:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;
-&lt;code&gt;
-```markmap {height=&#34;200px&#34;}
-- Hugo Modules
-  - Hugo Blox
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal
-```
-&lt;/code&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;markmap&#34; style=&#34;height: 200px;&#34;&gt;
-
-&lt;pre&gt;- Hugo Modules
-  - Hugo Blox
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Anh here&amp;rsquo;s a more advanced mindmap with formatting, code blocks, and math:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;
-&lt;code&gt;
-```markmap
-- Mindmaps
-  - Links
-    - [Hugo Blox Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log(&#39;hello&#39;);
-      console.log(&#39;code block&#39;);
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-```
-&lt;/code&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;markmap&#34; style=&#34;height: 500px;&#34;&gt;
-
-&lt;pre&gt;- Mindmaps
-  - Links
-    - [Hugo Blox Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log(&#39;hello&#39;);
-      console.log(&#39;code block&#39;);
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;highlighting&#34;&gt;Highlighting&lt;/h2&gt;
-&lt;p&gt;&lt;mark&gt;Highlight&lt;/mark&gt; important text with &lt;code&gt;mark&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;mark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Highlighted text&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;mark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;callouts&#34;&gt;Callouts&lt;/h2&gt;
-&lt;p&gt;Use &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/#callouts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;callouts&lt;/a&gt; (aka &lt;em&gt;asides&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;) to draw attention to notes, tips, and warnings.&lt;/p&gt;
-&lt;p&gt;By wrapping a paragraph in &lt;code&gt;{{% callout note %}} ... {{% /callout %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% callout note %}}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% /callout %}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;A Markdown aside is useful for displaying notices, hints, or definitions to your readers.&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;Or use the &lt;code&gt;warning&lt;/code&gt; callout type so your readers don&amp;rsquo;t miss critical details:&lt;/p&gt;
-&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-yellow-100 dark:bg-yellow-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-red-400&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0zM12 15.75h.007v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;A Markdown aside is useful for displaying notices, hints, or definitions to your readers.&lt;/span&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>👩🏼‍🏫 Teach academic courses</title>
-      <link>http://localhost:1313/post/teach-courses/</link>
-      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/teach-courses/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://hugoblox.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Blox Builder&lt;/a&gt; is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
-&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
-&lt;p&gt;Teach your course by sharing videos with your students. Choose from one of the following approaches:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Youtube&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; youtube D2vj0WcvH5c &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/D2vj0WcvH5c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Bilibili&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; bilibili BV1WV4y1r7DF &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;w-full h-auto aspect-video relative&#34;&gt;
-  &lt;iframe src=&#34;//player.bilibili.com/player.html?bvid=BV1WV4y1r7DF&amp;page=1&#34;
-  allow=&#34;accelerometer; clipboard-write; encrypted-media; gyroscope; fullscreen; picture-in-picture;&#34;
-  class=&#34;w-full h-full&#34;
-  &gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Video file&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Videos may be added to a page by either placing them in your &lt;code&gt;assets/media/&lt;/code&gt; media library or in your &lt;a href=&#34;https://gohugo.io/content-management/page-bundles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page&amp;rsquo;s folder&lt;/a&gt;, and then embedding them with the &lt;em&gt;video&lt;/em&gt; shortcode:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; video src=&amp;quot;my_video.mp4&amp;quot; controls=&amp;quot;yes&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;podcast&#34;&gt;Podcast&lt;/h2&gt;
-&lt;p&gt;You can add a podcast or music to a page by placing the MP3 file in the page&amp;rsquo;s folder or the media library folder and then embedding the audio on your page with the &lt;em&gt;audio&lt;/em&gt; shortcode:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; audio src=&amp;quot;ambient-piano.mp3&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Try it out:&lt;/p&gt;
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-&lt;audio controls &gt;
-  &lt;source src=&#34;http://localhost:1313/post/teach-courses/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
-&lt;/audio&gt;
-
-&lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;
-&lt;p&gt;Provide a simple yet fun self-assessment by revealing the solutions to challenges with the &lt;code&gt;spoiler&lt;/code&gt; shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;👉 Click to view the solution&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You found me!
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
-  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 Click to view the solution&lt;/summary&gt;
-  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
-    You found me 🎉
-  &lt;/div&gt;
-&lt;/details&gt;
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-&lt;p&gt;Hugo Blox Builder supports a Markdown extension for $\LaTeX$ math. Enable math by setting the &lt;code&gt;math: true&lt;/code&gt; option in your page&amp;rsquo;s front matter, or enable math for your entire site by toggling math in your &lt;code&gt;config/_default/params.yaml&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gamma&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{n} &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\frac&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{ &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; | &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n} &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;^T &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; |}{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\|\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{x}_{n}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{x}_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\|&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the math linebreak (&lt;code&gt;\\&lt;/code&gt;):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;k;p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{cases}p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{if }k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{if }k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{cases}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-$$
-f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp; \text{if }k=1, \\
-1-p_{0}^{*} &amp; \text{if }k=0.\end{cases}
-$$&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
-&lt;p&gt;Hugo Blox Builder utilises Hugo&amp;rsquo;s Markdown extension for highlighting code syntax. The code theme can be selected in the &lt;code&gt;config/_default/params.yaml&lt;/code&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```python
-import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandas&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;inline-images&#34;&gt;Inline Images&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&amp;lt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;icon&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;python&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;}}&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Python&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;
-  &lt;span class=&#34;inline-block  pr-1&#34;&gt;
-    &lt;svg style=&#34;height: 1em; transform: translateY(0.1em);&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;1em&#34; viewBox=&#34;0 0 448 512&#34; fill=&#34;currentColor&#34;&gt;&lt;path d=&#34;M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z&#34;/&gt;&lt;/svg&gt;
-  &lt;/span&gt; Python&lt;/p&gt;
-&lt;h2 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;
-</description>
     </item>
     
     <item>
@@ -548,6 +459,138 @@ data.head()
     &lt;svg style=&#34;height: 1em; transform: translateY(0.1em);&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;1em&#34; viewBox=&#34;0 0 448 512&#34; fill=&#34;currentColor&#34;&gt;&lt;path d=&#34;M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z&#34;/&gt;&lt;/svg&gt;
   &lt;/span&gt; Python&lt;/p&gt;
 &lt;h2 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Optogenetic Prosthetic</title>
+      <link>http://localhost:1313/post/optogenetics/optogenetics/</link>
+      <pubDate>Fri, 21 Jan 2022 12:45:14 -0400</pubDate>
+      <guid>http://localhost:1313/post/optogenetics/optogenetics/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;For most of the past year I&amp;rsquo;ve been working on a &lt;a href=&#34;https://clinicaltrials.gov/ct2/show/NCT04278131&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clinical trial&lt;/a&gt; for a disease called retinitis pigmentosa (RP) that&amp;rsquo;s &lt;a href=&#34;https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/retinitis-pigmentosa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;relatively rare, affecting 1 in 4,000 people&lt;/a&gt;. Sometimes when I&amp;rsquo;m asked by friends or family how the treatment works, it&amp;rsquo;s difficult to describe succinctly, but I&amp;rsquo;d like to because it&amp;rsquo;s pretty exciting! If successful, our treatment may be able to restore sight to people with degenerative ocular diseases such as RP, and would be an advancement of gene therapy technology.&lt;/p&gt;
+&lt;p&gt;The ideas for our treatment were formed by &lt;a href=&#34;https://physiology.med.cornell.edu/faculty/nirenberg/lab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my boss Sheila Nirenberg and her research group&lt;/a&gt;. The link contains her TED talk, publications, and news coverage about the research and technology behind the trial. My goal in writing this is to put together some of the things I&amp;rsquo;ve learned as someone with little biological background, providing a comprehensible and concise overview of the biological concepts underlying the trial.&lt;/p&gt;
+&lt;h2 id=&#34;a-photons-journey&#34;&gt;A Photon&amp;rsquo;s Journey&lt;/h2&gt;
+&lt;p&gt;Images that you perceive are formed in your brain based on light entering your eye. After passing through the lens of your eye, photons of light first hit specialized neurons in the retina called photoreceptors, which are subdivided into rods and cones.  Photoreceptors generate signals depending on the wavelength and intensity of the light coming in. Rods are mostly found in the periphery of your vision,  designed for low-light conditions, and are agnostic to color, which is why you see less color at nighttime. Cones are attuned to colors and are concentrated in the center of your vision, so you see the most detail with them. Light is converted to electrical energy at the photoreceptor level in a process called phototransduction. Phototransduction is a multi-step process, starting with photons hitting a class of proteins in the photoreceptors called &amp;ldquo;opsins&amp;rdquo; that contain a substance called retinal. Retinal&amp;rsquo;s structure changes when hit with photons of a particular wavelength, which begins a series of biochemical processes that result in an electrical potential to be created from the photoreceptors. Light intensity is directly proportional to the number of incident photons, so brighter light leads to a higher likelihood of phototransduction in each photoreceptor. Figure 1 is a good visualization I found for this- one counterintuitive and often confusing detail is that RGCs are closest to the center of the eye and photoreceptors are nearer to the back, meaning light passes through the later layers of the retina prior to encountering photoreceptors.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/opto1.jpg&#34; alt=&#34;Layers of the retina, from https://mammothmemory.net/biology/organs-and-systems/the-eye/rods-and-cones.html&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure 1: Rods and cones&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The neural network inside your retina connects these photoreceptors to several intermediate layers of cells  which aggregate, filter, and align the signal from the large number of photoreceptors. The transformed signal reaches a final layer called the &amp;ldquo;retinal ganglion cell&amp;rdquo; (RGC) layer. Each RGC has a patch of photoreceptors it is connected to via the aforementioned intermediate cells. Different types of RGCs confirm whether the middle of that patch or the surround of that patch are receiving light, and vary by patch size and color. The signal then leaves the retina onto the optic nerve, which transports it to a part of the thalamus of the brain called the lateral geniculate nucleus (LGN). Things get more complicated at the brain, where patches of LGN neurons respond to orientations of ganglion cells. The signal then goes to the back of your brain (occipital lobe) in a place called the visual cortex (aka visual area 1 (V1) aka Brodmann area 17 aka striate cortex). The cortex is a word for the outer part of the cerebrum of the brain, which is the wrinkly looking thing you probably think about when you think of a brain. At this point, you start performing higher-level processing, combining the visual information you&amp;rsquo;ve received with background knowledge to recognize, associate, or trigger reactions to what you&amp;rsquo;re seeing, which happens in various other parts of the brain in ways that are yet to be fully understood.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/opto2.jpeg&#34; alt=&#34;Visual pathway, modified from https://www.perkins.org/the-visual-pathway-from-the-eye-to-the-brain/&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure 2: The visual pathway&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;neurons&#34;&gt;Neurons&lt;/h2&gt;
+&lt;p&gt;When I say something is &amp;ldquo;responding&amp;rdquo; or &amp;ldquo;activating&amp;rdquo;, it might be unclear what that means. The basic unit of neural function is a cell called the neuron, and most neurons, given the desired input, can &amp;ldquo;fire&amp;rdquo; an action potential- this is the &amp;ldquo;response&amp;rdquo; or &amp;ldquo;activation&amp;rdquo;. Action potentials are events where the neurons undergo a large voltage increase from their resting state, which can be transmitted out of the neuron through a wire-like structure called an axon. Signals from other neurons are collected by other wire-like structures called dendrites: each neuron has many dendrites but one axon. In most neural pathways, axons meet with dendrites at places called synapses, which are structures regulating the passage of signal between a presynaptic and postsynaptic neuron via chemical or electrical means. The 14-16 billion neurons each can synapse with a large number of other neurons, which enables your brain to function in all the ways it does! It&amp;rsquo;s also interesting to recognize that neural action potential firing doesn&amp;rsquo;t change in amplitude- no matter what the input signal or stimulus is, the output action potential usually has about the same amplitude. Instead, the rate at which action potentials happen is indicative of the neuron&amp;rsquo;s response, so the rate is what matters to the neural network in most cases, not the amplitude.&lt;/p&gt;
+&lt;p&gt;Electrical activity in neural networks is caused by potential differences across membranes. Ionic gates (gates that let out or let in a specific ion, like Na+) in the membrane control the potential across the membrane, and these potential differences move down the axon to synapses. This traveling electrical signal is processed by other neurons, and can lead to neutotransmitter release and other biochemical reactions.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/opto3.jpg&#34; alt=&#34;Neuron, modified from https://askabiologist.asu.edu/neuron-anatomy&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure 3: The visual pathway&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;optogenetics&#34;&gt;Optogenetics&lt;/h2&gt;
+&lt;p&gt;What would happen if some portion of a neural network stopped working? This may be harmful to the function of that network, whatever that might be. Neural networks exhibit both redundancy (multiple neurons serving the same function) and plasticity (networks being able to learn and adapt to changes) so it&amp;rsquo;s not likely that things would go wrong, if, say, 10 individual neurons got destroyed. But if some disease destroyed an entire class of neurons, or an entire portion of a neural process- this could be problematic. To fully replace the missing neurons, you&amp;rsquo;d need to know the signal transformations they perform. If the neurons are not missing altogether but simply weaker, it may be sufficient to merely amplify the signal. Whichever path you take, you want to alter the damaged signal from only a selected group of cells, while leaving the healthy signal from other cells intact.&lt;/p&gt;
+&lt;p&gt;Optogenetics is a promising answer that plays well within these constraints. At the highest level, a neuron that previously was not firing creates new ionic gates which are responsive to external light. This development occurs because the neuron is expressing a gene brought to it by a viral vector (not one that self-replicates, just a carrier that inserts genetic information into the neutron). The genetic information and physical viral dynamics can be used to specify which kinds of neurons get infected. Once infected, a light of a particular wavelength can open and close more of the gates that determine membrane voltage, thereby triggering action potentials that weren&amp;rsquo;t being produced before. This is an improvement over, say, an array of electrodes because it offers a much more precise delivery that doesn&amp;rsquo;t require a permanent invasive apparatus.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/opto4.jpg&#34; alt=&#34;Optogenetics, from https://kids.frontiersin.org/articles/10.3389/frym.2017.0n0051&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure 4: An overview of optogenetics. ChR2 is an example of one type of opsin.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tying-it-together&#34;&gt;Tying it together&lt;/h2&gt;
+&lt;p&gt;In degenerative diseases like RP, the photoreceptors aren&amp;rsquo;t sending any signal to the other parts of the retina, so the RGC layer isn&amp;rsquo;t receiving any information to work off of. An optogenetic approach allows the RGCs to produce their own opsins, making the RGC layer respond to light instead of the dysfunctional photoreceptors. This leaves a problem: what happens to those intermediate transformations? If we show the same image to the RGCs that the photoreceptors normally get, there&amp;rsquo;s no guarantee it&amp;rsquo;ll be meaningful to the RGCs- otherwise, the healthy retina wouldn&amp;rsquo;t really have needed the layering it has to begin with. Ideally, we should to present the RGCs with an encoded image instead, one that carries the information from the original image along with the transformations provided in the intermediate layers.&lt;/p&gt;
+&lt;p&gt;Bionic Sight&amp;rsquo;s technology is able to do that because we can use a proprietary neural coding algorithm to transform the image for the RGCs and deliver it via the  optogenetic procedure. In this way, an input image can bypass the retina given healthy RGCs and everything after.&lt;/p&gt;
+&lt;h4 id=&#34;image-credits&#34;&gt;Image credits&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Post Main Image: &lt;a href=&#34;https://www.the-scientist.com/news-opinion/deep-brain-optogenetic-control-without-implants-67498&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Scientist Magazine&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Thumbnail Background Image: &lt;a href=&#34;http://www.columbiamedicinemagazine.org/features/spring-2014/optogenetics-revolution&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Columbia Medicine Magazine&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Figure 1: &lt;a href=&#34;https://mammothmemory.net/biology/organs-and-systems/the-eye/rods-and-cones.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mammoth Memmory&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Figure 2: &lt;a href=&#34;https://www.perkins.org/the-visual-pathway-from-the-eye-to-the-brain/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Perkins School for the Blind&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Figure 3: &lt;a href=&#34;https://askabiologist.asu.edu/neuron-anatomy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Arizona State University&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Figure 4: &lt;a href=&#34;https://kids.frontiersin.org/articles/10.3389/frym.2017.0n0051&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frontiers for Young Minds&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
