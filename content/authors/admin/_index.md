@@ -46,8 +46,8 @@ profiles:
 
 interests:
   - Neuroengineering
-  - Machine learning
-  - Optimal task design
+  - Machine Learning
+  - Optimal Task Design
 
 
 education:
