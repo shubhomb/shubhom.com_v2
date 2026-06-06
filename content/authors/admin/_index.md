@@ -217,5 +217,5 @@ Welcome to my site! I'm a grad student at the [Rice BCI Lab](https://www.rice-np
 
 Outside of research, I enjoy learning new things about the world through books, movies, travel, food or family and friends, and enjoy watching and playing sports like soccer and basketball. I also enjoy writing; this website is a work-in-progress for research related work, but I also semi-regularly post creative writing on [my newsletter](https://shubhom.substack.com/). 
 
-If you're interested in connecting about research or want to grab a coffee I'm all ears, feel free to shoot me a line. 
+If you're interested in connecting about research or want to grab a coffee I'm all ears, feel free to shoot me a line!
 
