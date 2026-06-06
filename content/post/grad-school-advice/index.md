@@ -8,7 +8,7 @@ tags:
 image:
   filename: "brc.jpg"
   caption: 'BioScience Research Collaborative, Rice University'
-draft: true
+draft: false
 ---
 
 Are you interested in research in neural interfaces? Not sure whether to apply as to BME, Neuroscience, or ECE departments? Not sure where your career path falls somewhere between big pharma/medical device companies, biotech startups, and academia? At some point or another I asked myself all of these questions and hoped to write a little bit about my experience because Reddit suggested other people experience similar uncertainties.
