@@ -45,9 +45,9 @@ profiles:
   #   url: https://orcid.org/
 
 interests:
-  - Neuroengineering
-  - Machine Learning
-  - Optimal Task Design
+  - Brain-computer interfaces 
+  - Neural dynamics and modeling
+  - Closed-loop stimulation
 
 
 education:
