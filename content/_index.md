@@ -22,20 +22,12 @@ sections:
       css_class: dark
       background:
         color: black
-        image:
-          # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
   - block: markdown
     content:
       title: '🧠 Research'
       subtitle: ''
       text: |-
-        My research so far has been investigating methods to perform closed-loop reading and stmiulation of the mouse visual cortex in collaboration with the [Xie Lab](https://www.chongxie.net/).         
+        My research so far has been investigating methods to perform closed-loop recording and stimulation of mouse visual cortex neurons in collaboration with the [Xie Lab](https://www.chongxie.net/). Ultimately, our goal is to enable stimulation to restore sensory percepts in human participants. As I continue on my PhD, I hope to share more updates about our work!        
         Please feel free to reach out if you would like to collaborate, have a cool tip, or have a question!
     design:
       columns: '1'

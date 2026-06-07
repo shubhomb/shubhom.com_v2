@@ -1,0 +1,122 @@
+<style>
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     LIGHT MODE ACCENT (replaces emerald)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  html:not(.dark) {
+    --color-primary-50:  255 238 230;
+    --color-primary-100: 254 215 196;
+    --color-primary-200: 252 178 148;
+    --color-primary-300: 245 130  90;
+    --color-primary-400: 225  85  45;
+    --color-primary-500: 196  58  22;
+    --color-primary-600: 163  40  12;
+    --color-primary-700: 128  28   6;
+    --color-primary-800:  96  18   2;
+    --color-primary-900:  68  10   0;
+    --color-primary-950:  40   4   0;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     UNIFIED BACKGROUND — no stripes
+     Single value for body, navbar, all sections
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  html:not(.dark),
+  html:not(.dark) body,
+  html:not(.dark) .page-wrapper,
+  html:not(.dark) #page-bg,
+  html:not(.dark) .page-header,
+  html:not(.dark) #site-header,
+  html:not(.dark) .header,
+  html:not(.dark) .navbar,
+  html:not(.dark) .hbb-section,
+  html:not(.dark) footer,
+  html:not(.dark) .page-footer { background-color: #f8d8c4 !important; }
+
+  html.dark,
+  html.dark body,
+  html.dark .page-wrapper,
+  html.dark #page-bg,
+  html.dark .page-header,
+  html.dark #site-header,
+  html.dark .header,
+  html.dark .navbar,
+  html.dark .hbb-section:not(#section-resume-biography-3),
+  html.dark footer,
+  html.dark .page-footer { background-color: #0d1b2a !important; }
+
+  /* Dropdown menus */
+  html:not(.dark) nav-dropdown-list { background-color: #f8d8c4 !important; }
+  html.dark nav-dropdown-list { background-color: #0d1b2a !important; }
+
+  /* Reserve scrollbar gutter so pages don't shift width when scrollbar appears */
+  html { scrollbar-gutter: stable both-edges; overflow-y: auto; }
+
+  /* White/zinc/gray card overrides inside non-hero sections */
+  html:not(.dark) .hbb-section [class*="bg-zinc"],
+  html:not(.dark) .hbb-section [class*="bg-gray"],
+  html:not(.dark) .hbb-section [class*="bg-slate"],
+  html:not(.dark) .bg-white { background-color: #f8d8c4 !important; }
+
+  html.dark .hbb-section:not(#section-resume-biography-3) [class*="bg-zinc"],
+  html.dark .hbb-section:not(#section-resume-biography-3) [class*="bg-gray"],
+  html.dark .hbb-section:not(#section-resume-biography-3) [class*="bg-slate"] { background-color: #0d1b2a !important; }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     LIGHT MODE TEXT — dark warm on peach bg
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  html:not(.dark) .navbar a,
+  html:not(.dark) .navbar button { color: #2a1208 !important; }
+  html:not(.dark) .navbar svg { stroke: #2a1208 !important; }
+  html:not(.dark) #neural-toggle svg { stroke: #2a1208 !important; }
+
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3),
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) h1,
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) h2,
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) h3,
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) p,
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) li,
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) span,
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) a,
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) [class*="text-zinc"],
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) [class*="text-gray"],
+  html:not(.dark) .hbb-section:not(#section-resume-biography-3) [class*="text-slate"] { color: #2a1208 !important; }
+
+  html:not(.dark) footer,
+  html:not(.dark) footer a,
+  html:not(.dark) footer p { color: #5a2e10 !important; }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     HERO — canvas bg set by JS; force all text white
+     Use :where() to beat Tailwind specificity
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  #section-resume-biography-3 .home-section-bg { background: transparent !important; }
+
+  /* Dark mode hero: force white text */
+  html.dark #section-resume-biography-3 *,
+  html.dark #section-resume-biography-3 [class*="text-zinc"],
+  html.dark #section-resume-biography-3 [class*="text-gray"],
+  html.dark #section-resume-biography-3 [class*="text-slate"] { color: white !important; }
+  html.dark #section-resume-biography-3 .avatar { background-color: rgba(255,255,255,0.12) !important; }
+  html.dark #section-resume-biography-3 a[href$=".pdf"] {
+    background-color: rgba(255,255,255,0.15) !important;
+    border-color: rgba(255,255,255,0.35) !important;
+  }
+
+  /* Light mode hero: force dark text on pale blue canvas */
+  html:not(.dark) #section-resume-biography-3 *,
+  html:not(.dark) #section-resume-biography-3 [class*="text-zinc"],
+  html:not(.dark) #section-resume-biography-3 [class*="text-gray"],
+  html:not(.dark) #section-resume-biography-3 [class*="text-slate"] { color: #1a0e06 !important; }
+  html:not(.dark) #section-resume-biography-3 svg { stroke: #1a0e06 !important; }
+  html:not(.dark) #section-resume-biography-3 .avatar { background-color: rgba(0,0,0,0.06) !important; }
+  html:not(.dark) #section-resume-biography-3 a[href$=".pdf"] {
+    background-color: rgba(0,0,0,0.08) !important;
+    border-color: rgba(0,0,0,0.2) !important;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     SEARCH OVERLAY
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  html:not(.dark) #search-wrapper { background-color: #fce8d8 !important; }
+  html.dark #search-wrapper { background-color: #0d1b2a !important; }
+</style>

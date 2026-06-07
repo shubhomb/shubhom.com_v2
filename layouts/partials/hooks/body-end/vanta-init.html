@@ -1,0 +1,225 @@
+<script>
+(function () {
+  var hero = document.querySelector('#section-resume-biography-3');
+  if (!hero) return;
+
+  // --- Canvas setup ---
+  var canvas = document.createElement('canvas');
+  canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0';
+  hero.style.position = 'relative';
+  var heroInner = hero.querySelector(':scope > *');
+  if (heroInner) { heroInner.style.position = 'relative'; heroInner.style.zIndex = '1'; }
+  hero.insertBefore(canvas, hero.firstChild);
+  var ctx = canvas.getContext('2d');
+
+  function resize() { canvas.width = hero.offsetWidth; canvas.height = hero.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // --- Performance autodetect ---
+  // Count dropped frames over the first 90 frames; if avg fps < 40 reduce node count
+  var NODE_COUNT = 55;
+  var isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) || window.innerWidth < 768;
+  if (isMobile) NODE_COUNT = 28;
+
+  var fpsFrames = 0, fpsStart = null, fpsSampled = false;
+
+  // --- Theme-aware colors ---
+  function isDark() { return document.documentElement.classList.contains('dark'); }
+  function getColors() {
+    if (isDark()) {
+      return { bg: '#0d1b2a', node: { r: 79, g: 163, b: 224 } };
+    } else {
+      return { bg: '#f8d8c4', node: { r: 30, g: 100, b: 180 } };
+    }
+  }
+
+  // Update hero bg and text contrast when theme changes
+  function applyHeroBg() {
+    var c = getColors();
+    hero.style.backgroundColor = c.bg;
+  }
+  applyHeroBg();
+  var themeObserver = new MutationObserver(applyHeroBg);
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+  // --- Nodes ---
+  var MAX_DIST = 160;
+  var nodes = [];
+  function makeNodes(count) {
+    nodes = [];
+    for (var i = 0; i < count; i++) {
+      nodes.push({
+        x: Math.random(), y: Math.random(),
+        vx: (Math.random() - 0.5) * 0.00015,
+        vy: (Math.random() - 0.5) * 0.00015,
+        spike: 0, spikeDecay: 0,
+      });
+    }
+  }
+  makeNodes(NODE_COUNT);
+
+  // --- Input state ---
+  var mouseX = -1, mouseY = -1;
+  var scrollBoost = 0, lastScrollY = window.scrollY;
+  var clickPoints = [];
+
+  hero.addEventListener('mousemove', function (e) {
+    var r = hero.getBoundingClientRect();
+    mouseX = (e.clientX - r.left) / canvas.width;
+    mouseY = (e.clientY - r.top) / canvas.height;
+  });
+  hero.addEventListener('mouseleave', function () { mouseX = -1; mouseY = -1; });
+
+  hero.addEventListener('click', function (e) {
+    var r = hero.getBoundingClientRect();
+    var cx = (e.clientX - r.left) / canvas.width;
+    var cy = (e.clientY - r.top) / canvas.height;
+    clickPoints.push({ x: cx, y: cy, t: 0 });
+    nodes.forEach(function (n) {
+      var dx = n.x - cx, dy = n.y - cy;
+      var d = Math.sqrt(dx * dx + dy * dy);
+      if (d < 0.18) { n.spike = Math.max(n.spike, 1 - d / 0.18); n.spikeDecay = 0.04 + Math.random() * 0.03; }
+    });
+  });
+
+  // Touch: treat tap as click, swipe as scroll boost
+  var lastTouchY = null;
+  hero.addEventListener('touchstart', function (e) { lastTouchY = e.touches[0].clientY; }, { passive: true });
+  hero.addEventListener('touchmove', function (e) {
+    if (lastTouchY !== null) {
+      var dy = Math.abs(e.touches[0].clientY - lastTouchY);
+      scrollBoost = Math.min(scrollBoost + dy * 0.004, 0.15);
+      lastTouchY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  window.addEventListener('scroll', function () {
+    var dy = Math.abs(window.scrollY - lastScrollY);
+    scrollBoost = Math.min(scrollBoost + dy * 0.004, 0.15);
+    lastScrollY = window.scrollY;
+  }, { passive: true });
+
+  // --- Toggle state ---
+  var enabled = true;
+  var paused = false; // set true when toggled off
+
+  window.__neuralToggle = function () {
+    enabled = !enabled;
+    canvas.style.display = enabled ? '' : 'none';
+    paused = !enabled;
+    if (enabled) { paused = false; requestAnimationFrame(loop); }
+  };
+
+  // --- Main loop ---
+  function loop(ts) {
+    if (paused) return;
+    requestAnimationFrame(loop);
+
+    // FPS sampling: after 90 frames check average fps, reduce nodes if needed
+    if (!fpsSampled) {
+      if (fpsStart === null) fpsStart = ts;
+      fpsFrames++;
+      if (fpsFrames >= 90) {
+        fpsSampled = true;
+        var elapsed = ts - fpsStart;
+        var avgFps = fpsFrames / (elapsed / 1000);
+        if (avgFps < 40 && NODE_COUNT > 20) {
+          NODE_COUNT = Math.floor(NODE_COUNT * 0.6);
+          makeNodes(NODE_COUNT);
+        }
+      }
+    }
+
+    var W = canvas.width, H = canvas.height;
+    var BASE_COLOR = getColors().node;
+    ctx.clearRect(0, 0, W, H);
+    scrollBoost *= 0.90;
+    clickPoints = clickPoints.filter(function (p) { return p.t < 1; });
+    clickPoints.forEach(function (p) { p.t += 0.025; });
+
+    nodes.forEach(function (n) {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > 1) n.vx *= -1;
+      if (n.y < 0 || n.y > 1) n.vy *= -1;
+      if (n.spike > 0) n.spike = Math.max(0, n.spike - n.spikeDecay);
+
+      var mouseBoost = 0;
+      if (mouseX >= 0) {
+        var mdx = n.x - mouseX, mdy = n.y - mouseY;
+        var md = Math.sqrt(mdx * mdx + mdy * mdy);
+        mouseBoost = Math.max(0, 0.18 * (1 - md / 0.22));
+      }
+
+      var clickBoost = 0;
+      clickPoints.forEach(function (p) {
+        var cdx = n.x - p.x, cdy = n.y - p.y;
+        var cd = Math.sqrt(cdx * cdx + cdy * cdy);
+        var waveFront = p.t * 0.5;
+        var waveDist = Math.abs(cd - waveFront);
+        if (waveDist < 0.06) clickBoost += (1 - p.t) * (1 - waveDist / 0.06) * 0.9;
+      });
+
+      var rate = 0.004 + scrollBoost * 0.3 + mouseBoost + clickBoost;
+      if (Math.random() < rate) {
+        n.spike = 0.8 + Math.random() * 0.2;
+        n.spikeDecay = 0.03 + Math.random() * 0.04;
+      }
+    });
+
+    // Edges
+    for (var i = 0; i < nodes.length; i++) {
+      for (var j = i + 1; j < nodes.length; j++) {
+        var dx = (nodes[i].x - nodes[j].x) * W;
+        var dy = (nodes[i].y - nodes[j].y) * H;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d >= MAX_DIST) continue;
+        var alpha = (1 - d / MAX_DIST) * 0.35;
+        var sm = Math.max(nodes[i].spike, nodes[j].spike);
+        var r = Math.round(BASE_COLOR.r + (255 - BASE_COLOR.r) * sm * 0.6);
+        var g = Math.round(BASE_COLOR.g + (255 - BASE_COLOR.g) * sm * 0.2);
+        var bv = Math.round(BASE_COLOR.b + (255 - BASE_COLOR.b) * sm * 0.1);
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x * W, nodes[i].y * H);
+        ctx.lineTo(nodes[j].x * W, nodes[j].y * H);
+        ctx.strokeStyle = 'rgba(' + r + ',' + g + ',' + bv + ',' + (alpha + sm * 0.55).toFixed(3) + ')';
+        ctx.lineWidth = 0.8 + sm * 1.5;
+        ctx.stroke();
+      }
+    }
+
+    // Nodes
+    nodes.forEach(function (n) {
+      var s = n.spike;
+      var r = Math.round(BASE_COLOR.r + (255 - BASE_COLOR.r) * s * 0.7);
+      var g = Math.round(BASE_COLOR.g + (255 - BASE_COLOR.g) * s * 0.15);
+      var bv = BASE_COLOR.b;
+      var radius = 2.5 + s * 4;
+      if (s > 0.1) {
+        var grd = ctx.createRadialGradient(n.x * W, n.y * H, 0, n.x * W, n.y * H, radius * 4);
+        grd.addColorStop(0, 'rgba(' + r + ',' + g + ',' + bv + ',' + (s * 0.4).toFixed(3) + ')');
+        grd.addColorStop(1, 'rgba(' + r + ',' + g + ',' + bv + ',0)');
+        ctx.beginPath();
+        ctx.arc(n.x * W, n.y * H, radius * 4, 0, Math.PI * 2);
+        ctx.fillStyle = grd;
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.arc(n.x * W, n.y * H, radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + bv + ',' + (0.7 + s * 0.3).toFixed(3) + ')';
+      ctx.fill();
+    });
+  }
+
+  requestAnimationFrame(loop);
+
+  // Wire up the server-rendered toggle button
+  var toggleBtn = document.getElementById('neural-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      window.__neuralToggle();
+      toggleBtn.style.opacity = enabled ? '1' : '0.35';
+    });
+  }
+})();
+</script>

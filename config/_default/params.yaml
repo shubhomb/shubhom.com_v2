@@ -40,7 +40,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {2025} Shubhom Bhattacharya'
+    notice: '© {year} Shubhom Bhattacharya · Built with [Hugo](https://gohugo.io) & [Hugo Blox](https://hugoblox.com)'
     license:
       enable: true
       allow_derivatives: false

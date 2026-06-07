@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: January 2, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: June 6, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -160,8 +160,8 @@
   
 
   
-  <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu6864983065907022315.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12844664979700763937.png" />
 
   <link rel="canonical" href="http://localhost:1313/tags/wowchemy/" />
 
@@ -191,8 +191,8 @@
   <meta property="og:site_name" content="Shubhom&#39;s Website" />
   <meta property="og:url" content="http://localhost:1313/tags/wowchemy/" />
   <meta property="og:title" content="Wowchemy | Shubhom&#39;s Website" />
-  <meta property="og:description" content="Shubhom Bhattacharyas personal website" /><meta property="og:image" content="http://localhost:1313/media/icon_hu7729264130191091259.png" />
-    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Shubhom Bhattacharyas personal website" /><meta property="og:image" content="http://localhost:1313/media/icon_hu14360587778801181549.png" />
+    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu14360587778801181549.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta property="og:updated_time" content="2023-10-26T00:00:00&#43;00:00" />
@@ -236,6 +236,27 @@
   
   
   
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
     
       
@@ -644,6 +665,14 @@
       
     
   
+    
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+      
+    
+  
 
 
 
@@ -987,7 +1016,7 @@
 
   
   <p class="powered-by text-center">
-    © {2025} Shubhom Bhattacharya
+    © 2026 Shubhom Bhattacharya · Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> &amp; <a href="https://hugoblox.com" target="_blank" rel="noopener">Hugo Blox</a>
   </p>
   
 
@@ -1035,6 +1064,114 @@
 
 
 
+
+  
+    
+      
+      <script>
+(function () {
+  var hero = document.querySelector('#section-resume-biography-3');
+  if (!hero || typeof VANTA === 'undefined') return;
+  hero.style.position = 'relative';
+
+  var baseRate = 0.012;
+  var scrollBoost = 0;
+  var lastScrollY = window.scrollY;
+  var mouseX = 0.5, mouseY = 0.5;
+  var clickBursts = [];
+
+  var effect = VANTA.NET({
+    el: hero,
+    THREE: THREE,
+    mouseControls: false,
+    touchControls: false,
+    gyroControls: false,
+    color: 0x4fa3e0,
+    backgroundColor: 0x000000,
+    points: 10,
+    maxDistance: 22,
+    spacing: 18,
+    showDots: true,
+  });
+
+  
+  hero.addEventListener('mousemove', function (e) {
+    var r = hero.getBoundingClientRect();
+    mouseX = (e.clientX - r.left) / r.width;
+    mouseY = (e.clientY - r.top) / r.height;
+  });
+
+  
+  hero.addEventListener('click', function (e) {
+    var r = hero.getBoundingClientRect();
+    var cx = (e.clientX - r.left) / r.width;
+    var cy = (e.clientY - r.top) / r.height;
+    clickBursts.push({ x: cx, y: cy, t: 0, strength: 1.5 });
+    
+    for (var i = 0; i < 5; i++) {
+      (function (delay) {
+        setTimeout(function () {
+          clickBursts.push({
+            x: cx + (Math.random() - 0.5) * 0.25,
+            y: cy + (Math.random() - 0.5) * 0.25,
+            t: 0,
+            strength: 0.8,
+          });
+        }, delay);
+      })(80 + i * 60);
+    }
+  });
+
+  
+  window.addEventListener('scroll', function () {
+    var dy = Math.abs(window.scrollY - lastScrollY);
+    scrollBoost = Math.min(dy * 0.003, 0.06);
+    lastScrollY = window.scrollY;
+  });
+
+  
+  var lastSpike = 0;
+  function spikeLoop(ts) {
+    requestAnimationFrame(spikeLoop);
+
+    
+    scrollBoost *= 0.92;
+
+    
+    var burstBoost = 0;
+    clickBursts = clickBursts.filter(function (b) { return b.t < 1; });
+    clickBursts.forEach(function (b) {
+      b.t += 0.05;
+      burstBoost += b.strength * (1 - b.t);
+    });
+
+    
+    var mouseDist = Math.sqrt(Math.pow(mouseX - 0.5, 2) + Math.pow(mouseY - 0.5, 2));
+    var mouseBoost = Math.max(0, 0.04 * (1 - mouseDist * 2));
+
+    var rate = baseRate + scrollBoost + mouseBoost + burstBoost;
+
+    
+    if (Math.random() < rate) {
+      var brightness = 0.6 + Math.random() * 0.4;
+      var r = Math.round(0x4f * brightness + (clickBursts.length ? 0x30 : 0));
+      var g = Math.round(0xa3 * brightness);
+      var b = Math.round(0xe0 * brightness);
+      var spikeColor = (r << 16) | (g << 8) | b;
+      effect.setOptions({ color: spikeColor });
+      
+      setTimeout(function () {
+        effect.setOptions({ color: 0x4fa3e0 });
+      }, 80 + Math.random() * 120);
+    }
+  }
+  requestAnimationFrame(spikeLoop);
+})();
+</script>
+
+      
+    
+  
 
 
 

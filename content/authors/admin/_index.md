@@ -76,7 +76,7 @@ work:
     date_start: 2025-08-25
     # date_end: 2025-08-25
     summary: |2-
-      I am a first-year grad student working with Dr. Nishal Shah in the [Rice BCI Lab](https://www.rice-npl.com/) on decoding motor 
+      I am a first-year grad student working with Dr. Nishal Shah in the [Rice BCI Lab](https://www.rice-npl.com/) on decoding motor planning and closed-loop stimulation. Our goal is to improve neural robotic control to allow paraplegic people to regain autonomy for daily activities of living, like feeding themselves. 
   - position: Rotation Student
     company_name: Hennig Lab
     company_url: 'https://www.henniglab.org//'
@@ -213,7 +213,7 @@ awards:
 
 ## Hi!
 
-Welcome to my site! I'm a grad student at the [Rice BCI Lab](https://www.rice-npl.com/) in Houston, Texas researching how artificial intelligence can be used to restore motor functions for patients with spinal cord injury, ALS, and other diseases that cause motor deficits. Before this, I spent four amazing years as a research engineer in New York City at [Bionic Sight](https://www.bionicsightllc.com/), working on a [clinical trial](https://classic.clinicaltrials.gov/ct2/show/NCT04278131) of an optogenetic retinal therapy for blind patients. Through these experiences, I'm really optimistic that advances in complementary fields like AI, materials science, genetics, and basic neuroscience (among nothers) will allow us to ask hard questions about how the brain thinks with immediate benefits for people who need it. 
+Welcome to my site! I'm a grad student at the [Rice BCI Lab](https://www.rice-npl.com/) in Houston, Texas researching how artificial intelligence can be used to restore motor functions for patients with spinal cord injury, ALS, and other diseases that cause motor deficits. Before this, I spent four amazing years as a research engineer in New York City at [Bionic Sight](https://www.bionicsightllc.com/), working on a [clinical trial](https://classic.clinicaltrials.gov/ct2/show/NCT04278131) of an optogenetic retinal therapy for blind patients. Through these experiences, I'm really optimistic that advances in complementary fields like AI, materials science, genetics, and neuroscience (among others) will allow us to ask hard questions about how the brain thinks with immediate clinical benefits for the people who need it the most. 
 
 Outside of research, I enjoy learning new things about the world through books, movies, travel, food or family and friends, and enjoy watching and playing sports like soccer and basketball. I also enjoy writing; this website is a work-in-progress for research related work, but I also semi-regularly post creative writing on [my newsletter](https://shubhom.substack.com/). 
 
